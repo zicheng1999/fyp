@@ -27,8 +27,9 @@
               </a>
             </li>
 
+            <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-check"></i>Order Traking</a></li>
 
-            <li>
+    <li>
     
 
 @auth
@@ -97,7 +98,7 @@
           <!-- /.contact-row --> 
           <!-- ============================================================= SEARCH AREA ============================================================= -->
           <div class="search-area">
-            <form method="post" action="route('product.search') todo">
+            <form method="post" action=" {{ route('product.search') }} ">
               @csrf
               <div class="control-group">
                 <ul class="categories-filter animate-dropdown">
@@ -245,7 +246,7 @@
 @endforeach <!-- // End Category Foreach -->
 
 
-  <li> <a href="" style="display:none;">Shop</a></li>       
+  <li> <a href="{{ route('shop.page') }}" style="display:none;">Shop Now</a></li>       
   <li class="dropdown navbar-right special-menu" style="display:none;"> <a href="#x">Todays offer</a> </li>
   <li class="dropdown  navbar-right special-menu" style="display:none;"> <a href="route('home.blog') todo">Blog</a> </li>
 </ul>
@@ -279,7 +280,7 @@
       </div>
       <div class="modal-body">
          
-        <form method="post" action="{{ route('order.tracking') todo">
+        <form method="post" action="{{ route('order.tracking') }}">
           @csrf
          <div class="modal-body">
           <label>Invoice Code</label>

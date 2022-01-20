@@ -206,10 +206,7 @@ Product Search Page
             <!-- /.container-fluid --> 
           </div>
         </div>
-      
-        <h4><b>Total Search </b><span class="badge badge-danger" style="background: #FF0000;"> {{ count($products) }} </span> Items  </h4>
-
-
+        
      
         <div class="clearfix filters-container m-t-10">
           <div class="row">
@@ -556,4 +553,3 @@ Product Search Page
 
 
 @endsection
-

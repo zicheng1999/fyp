@@ -19,6 +19,7 @@ use App\Models\SubSubCategory;
  
 class IndexController extends Controller
 {
+	
     public function index(){
     	//$blogpost = BlogPost::latest()->get();
     	$products = Product::where('status',1)->orderBy('id','DESC')->limit(6)->get();
