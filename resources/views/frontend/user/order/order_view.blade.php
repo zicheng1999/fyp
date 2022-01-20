@@ -1,7 +1,8 @@
 @extends('frontend.main_master')
-@section('content')
 
-<div class="body-content">
+
+@section('content')
+<div class="body-content" style="margin-top: 10px;">
 	<div class="container">
 		<div class="row">
 			 @include('frontend.common.user_sidebar')
@@ -12,8 +13,8 @@
        <div class="col-md-8">
 
         <div class="table-responsive">
-          <table class="table">
-            <tbody>
+          <table class="table table-striped table-bordered" id="table_order" >
+            <thead>
   
               <tr style="background: #e2e2e2;">
                 <td class="col-md-1">
@@ -42,8 +43,9 @@
                 </td>
                 
               </tr>
+              <thead>
 
-
+              <tbody>
               @foreach($orders as $order)
        <tr>
                 <td class="col-md-1">
@@ -130,6 +132,36 @@
 	</div>
 	
 </div>
- 
+
+<table id="tbl">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    console.log("hi-1");
+    console.log("hi-2");
+    console.log("hi-3");
+
+    $('#table_order').DataTable();
+}); // end
+</script>
 
 @endsection
+

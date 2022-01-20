@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Models\Order;
+use App\Models\User;
 use App\Models\OrderItem;
 use Illuminate\Support\Facades\Session;
 use Auth;
@@ -117,7 +118,20 @@ class AllUserController extends Controller
 
     } // end mehtod 
 
+    public function check_duplicated_email(Request $request){
 
+        $email =  $request->email;
+        $user = User::query()
+                ->where('email',$email) 
+                ->get()->first();
+
+        $msg = "duplicated";
+        if ($user == null) {
+            $msg = "ok";
+        }
+
+        return response()->json(['msg'=> $msg]);
+    }
 
 
 }

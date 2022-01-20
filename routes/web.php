@@ -31,6 +31,7 @@ use App\Http\Controllers\Backend\ReturnController;
 use App\Http\Controllers\User\ReviewController;
 use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Frontend\ShopController;
+use App\Http\Controllers\User\ReferralController;
 
 /*
 |--------------------------------------------------------------------------
@@ -264,7 +265,8 @@ Route::get('/cancel/orders', [AllUserController::class, 'CancelOrders'])->name('
 Route::post('/review/store', [ReviewController::class, 'ReviewStore'])->name('review.store');
 Route::post('/order/tracking', [AllUserController::class, 'OrderTraking'])->name('order.tracking');    
 
- 
+Route::get('/referral/view', [ReferralController::class, 'ViewReferral'])->name('referral.view');    
+
 
 });
 
@@ -436,3 +438,7 @@ Route::prefix('adminuserrole')->group(function(){
 
 Route::post('/search', [IndexController::class, 'ProductSearch'])->name('product.search');
 Route::get('/shop', [ShopController::class, 'ShopPage'])->name('shop.page');
+
+// Validation
+Route::post('/register/checkemail', [AllUserController::class, 'check_duplicated_email'])->name('signup.check.email');
+

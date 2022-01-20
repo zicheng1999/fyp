@@ -14,9 +14,25 @@ $seo = App\Models\Seo::find(1);
 <meta name="keywords" content="{{ $seo->meta_keyword }}">
 <meta name="robots" content="all">
 
+<script src="{{ asset('frontend/assets/js/jquery-1.11.1.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/bootstrap-hover-dropdown.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/echo.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/jquery.easing-1.3.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/bootstrap-slider.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/jquery.rateit.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('frontend/assets/js/lightbox.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/bootstrap-select.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script> 
+<script src="{{ asset('frontend/assets/js/scripts.js') }}"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- /// Google Analytics Code // -->
 <script>
-    {{ $seo->google_analytics }}
+    // {{ $seo->google_analytics }}
 </script>
 <!-- /// Google Analytics Code // -->
 
@@ -34,6 +50,10 @@ $seo = App\Models\Seo::find(1);
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/rateit.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap-select.min.css') }}">
 
+<!-- s: datatables --> 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+<!-- e: datatables --> 
+
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/font-awesome.css') }}">
 
@@ -43,6 +63,7 @@ $seo = App\Models\Seo::find(1);
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
 
 <script src="https://js.stripe.com/v3/"></script>
 </head>
@@ -58,11 +79,9 @@ $seo = App\Models\Seo::find(1);
 @include('frontend.body.footer')
 <!-- ============================================================= FOOTER : END============================================================= --> 
 
-<!-- For demo purposes – can be removed on production --> 
 
-<!-- For demo purposes – can be removed on production : End --> 
 
-<!-- JavaScripts placed at the end of the document so the pages load faster --> 
+<!-- JavaScripts placed at the end of the document so the pages load faster 
 <script src="{{ asset('frontend/assets/js/jquery-1.11.1.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/bootstrap-hover-dropdown.min.js') }}"></script> 
@@ -78,7 +97,7 @@ $seo = App\Models\Seo::find(1);
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
 
 <script>
  @if(Session::has('message'))

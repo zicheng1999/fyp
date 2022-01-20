@@ -25,7 +25,7 @@
                 </td>
 
                 <td class="col-md-3">
-                  <label for=""> Payment</label>
+                  <label for=""> Downline ID</label>
                 </td>
 
 
@@ -34,11 +34,11 @@
                 </td>
 
                  <td class="col-md-1">
-                  <label for=""> Order Reason </label>
+                  <label for=""> Coin Claimed </label>
                 </td>
 
                  <td class="col-md-2">
-                  <label for=""> Order Status</label>
+                  <label for=""> Downline Name </label>
                 </td>     
               </tr>
 </thead>
@@ -64,24 +64,11 @@
                 </td>
 
                  <td class="col-md-2">
-                  <label for=""> {{ $order->return_reason }}</label>
+                  <label for=""> {{ "coin claimed" }}</label>
                 </td>
 
                  <td class="col-md-2">
-                  <label for=""> 
-
-   @if($order->return_order == 0) 
- <span class="badge badge-pill badge-warning" style="background: #418DB9;"> No Return Request </span>
- @elseif($order->return_order == 1)
- <span class="badge badge-pill badge-warning" style="background: #800000;"> Pending </span>
- <span class="badge badge-pill badge-warning" style="background:red;">Return Requested </span>
-
- @elseif($order->return_order == 2)
-  <span class="badge badge-pill badge-warning" style="background: #008000;">Success </span>
-  @endif
-                    
-
-                    </label>
+                  <label for=""> {{ "coin claimed" }}</label>
                 </td>
               </tr>
               @endforeach

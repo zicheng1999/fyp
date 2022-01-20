@@ -11,11 +11,7 @@
                 @if(session()->get('language') == 'chinese') 我的户口 @else My Account @endif
               </a>
             </li>
-            <li>
-              <a href=><i class="icon fa fa-heart"></i>
-                @if(session()->get('language') == 'chinese') 心愿单 @else Wishlist @endif
-              </a>
-            </li>
+
             <li>
               <a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>
                 @if(session()->get('language') == 'chinese') 购物车 @else My Cart @endif
@@ -27,23 +23,37 @@
               </a>
             </li>
 
-            <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-check"></i>Order Traking</a></li>
+            <li>
+              <a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-check"></i>
+              Order Traking</a>
+            </li>
 
-    <li>
+ 
     
 
 @auth
-  <a href="{{ route('dashboard') }}"><i class="icon fa fa-user"></i>
-    @if(session()->get('language') == 'chinese') 我的账户 @else User Profile @endif
-  </a>
+  <li>
+    <a href="{{ route('dashboard') }}"><i class="icon fa fa-user"></i>
+      @if(session()->get('language') == 'chinese') 我的账户 @else User Profile @endif
+    </a>
+  </li>
     @else 
-  <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>
-    @if(session()->get('language') == 'chinese') 登入/注册 @else Login/Register @endif
-  </a>
+
+    </li>
+      <a href="{{ route('login') }}"><i class="icon fa fa-user" style="color: white;"></i>
+        <span style="color: white;"> @if(session()->get('language') == 'chinese') 登入 @else Login @endif</span>
+      </a>
+  </li>
+
+  <li>
+    <a href="{{ route('register') }}"><i class="icon fa fa-lock"></i>
+      @if(session()->get('language') == 'chinese') 注册 @else Register @endif
+    </a>
+  </li>
 @endauth
               
 
-            </li>
+          
           </ul>
         </div>
         <!-- /.cnt-account -->
